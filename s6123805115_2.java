@@ -18,7 +18,7 @@ public class s6123805115_2 {
             
             Scanner b = new Scanner(System.in);
             System.out.print("Enter name : ");
-            String name = b.next();
+            String name = b.nextLine();
             
             Scanner c = new Scanner(System.in);
             System.out.print("Enter Age : ");
