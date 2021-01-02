@@ -12,16 +12,20 @@ package tanawat;
 import java.util.Scanner;
 public class s6123805115_1 {
         public static void main(String[] args){
-            Scanner a = new Scanner(System.in);
-            System.out.print("Enter number 1 : ");
-            int num1 = a.nextInt();
+            double rate = 150;
+            int standard = 40;
+            double pay;
             
-            System.out.print("Enter number 2 : ");
-            int num2 = a.nextInt();
-                         
-        System.out.println("Result of number 1 + number 2 = "+ (num1+num2));
-        System.out.println("Result of number 1 - number 2 = "+ (num1-num2));
-        System.out.println("Result of number 1 * number 2 = "+ (num1*num2));
-        System.out.println("Result of number 1 / number 2 = "+ (num1/num2));
-    }
+            Scanner scan = new Scanner(System.in);
+            System.out.print("Enter your working hours : ");
+            
+            int hour = scan.nextInt();
+            if(hour > standard)
+                pay = standard*rate + (hour-standard)*(rate*1.5);
+            else
+            {
+                pay = hour*rate;
+            }
+            System.out.println("Pay = "+pay);
+        }
 }

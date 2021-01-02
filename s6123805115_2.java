@@ -9,28 +9,26 @@ package tanawat;
  *
  * @author tanaw
  */
+import java.util.ArrayList;
 import java.util.Scanner;
+ 
 public class s6123805115_2 {
-        public static void main(String[] args){
-            Scanner a = new Scanner(System.in);
-            System.out.print("Enter student ID : ");
-            long num1 = a.nextLong();
-            
-            Scanner b = new Scanner(System.in);
-            System.out.print("Enter name : ");
-            String name = b.nextLine();
-            
-            Scanner c = new Scanner(System.in);
-            System.out.print("Enter Age : ");
-            int num2 = c.nextInt();
-            
-            Scanner d = new Scanner(System.in);
-            System.out.print("Enter GPA : ");
-            float num3 = d.nextFloat();
-            
-        System.out.println("Your student ID is "+ num1);
-        System.out.println("Your name is "+ name);
-        System.out.println("You age is "+ num2);
-        System.out.println("You GPA is "+ num3);
+ 
+    public static void main(String[] args) {
+         
+        Scanner scan = new Scanner(System.in);
+        ArrayList <Double> list = new ArrayList<Double>();
+         
+        int i = 1;
+        while(i <= 2)
+        {
+            System.out.printf("กรุณากรอกตัวเลขครั้งที่�%d : ", i);
+            list.add(scan.nextDouble());
+            i++;
+        }
+        scan.close();
+         
+        Double sum = list.stream().mapToDouble(Double::doubleValue).sum();
+        System.out.printf("ผลรวมทั้งหมด คือ %.2f", sum);       
     }
 }
